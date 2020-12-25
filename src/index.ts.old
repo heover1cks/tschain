@@ -1,0 +1,32 @@
+// interface Human {
+//     name: string;
+//     age: number;
+//     gender: string;
+// }
+
+class Human{ 
+    public name: string;
+    private age: number;
+    public gender: string;
+    constructor(name: string, age: number, gender: string){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    };
+}
+
+const name = "Jaeyoung Heo",age = 28,gender = "male"
+// const person = {
+//     name: "Jaeyoung Heo",
+//     age: 28,
+//     gender: "male"
+// }
+
+const jaeyoung = new Human("JY", 123, "male");
+
+const sayHi = (person:Human):String => {
+    return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}`;
+}
+
+console.log(sayHi(jaeyoung));
+export {};
